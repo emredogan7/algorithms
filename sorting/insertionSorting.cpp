@@ -26,14 +26,14 @@ int main() {
   // Sorting Operation Begins.
 	for(int i = 1; i < length; i++)                         // go from the second element through the end of array.
 	{
-		int temp = arr[i];                                    // selecting the first unsorted element.
+		int temp = arr[i];                              // selecting the first unsorted element.
 		int j = i - 1;
 		while(j >= 0 && temp < arr[j])
-		{                                                     // this while loop shifts all the elements to
+		{                                               // this while loop shifts all the elements to
 			arr[j+1] = arr[j];                                  // right to open the position for unsorted element.
 			j = j - 1;
 		}
-		arr[j + 1] = temp;                                    // inserting the unsorted element to its correct position.
+		arr[j + 1] = temp;                              // inserting the unsorted element to its correct position.
 	}
 
   cout<<"\n Sorting Operation Completed!\n The sorted array is : \n";
