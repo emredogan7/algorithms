@@ -25,15 +25,15 @@ int main() {
 	}
 
   // Sorting Operation Begins.
-  for (int i = 0; i < length; i++)                                              //The outer loop travels through all the array.
+  for (int i = 0; i < length; i++)                                   //The outer loop travels through all the array.
   {
-    int smallest = i;                                                           //smallest variable represents lastly located sorted element.
+    int smallest = i;                                                //smallest variable represents lastly located sorted element.
 
-    for (int j = i + 1; j < length; j++)                                        //traveling through unordered tail of the array
+    for (int j = i + 1; j < length; j++)                             //traveling through unordered tail of the array
     {
       if(arr[j] < arr[smallest])
       {
-        smallest = j;                                                           //comparing all the elements of unordered tail with lastly added ordered element.
+        smallest = j;                                                //comparing all the elements of unordered tail with lastly added ordered element.
       }
       // Swapping Operation
       int temp = arr[i];
