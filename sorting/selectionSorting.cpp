@@ -1,3 +1,10 @@
+// A program to illustrate selection sorting written in cpp.
+// You can simply run the code from the terminal(OSX and Ubuntu):
+// $ g++ selectionSorting.cpp -o output
+// $ ./output
+// then, the prompt will ask the number of elements and the elements themselves.
+
+
 #include<iostream>
 using namespace std;
 
