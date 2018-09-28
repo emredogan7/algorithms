@@ -71,10 +71,10 @@ void mergeSort(int array[], int left, int right)
     int middle = left + (right - left)/2 ;
     mergeSort(array, left, middle);
     mergeSort(array, middle+1, right);
+
     merge(array, left, middle, right);
   }
 }
-
 
 
 int main() {
@@ -89,13 +89,14 @@ int main() {
 	cout<<"\nEnter  the numbers you want to insert into your array:\n";
 	for(int i=0; i < length; i++)
 	{
-		cin>>arr[i];
+    cin>>arr[i];
 	}
   mergeSort(arr, 0, length-1);
 
-
   cout << "Sorting is completed:\n";
   for (int i=0; i < length; i++)
-      cout << arr[i] << "\t";
+  {
+    cout << arr[i] << "\t";
+  }
   cout << "\n";
 }
