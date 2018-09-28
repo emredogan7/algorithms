@@ -89,7 +89,7 @@ int main() {
 	cout<<"\nEnter  the numbers you want to insert into your array:\n";
 	for(int i=0; i < length; i++)
 	{
-    cin>>arr[i];
+	  cin>>arr[i];
 	}
   mergeSort(arr, 0, length-1);
 
