@@ -2,13 +2,20 @@
 #include<iostream>
 using namespace std;
 
-
+// Swapping Operation.
 void swap(int *a, int *b)
 {
   int temp = *a;
   *a = *b;
   *b = temp;
 }
+
+
+// Bubble Sort Operation.
+
+// Notice that for each iteration of k, there are (n-1) passes.
+// For each pass k, there happens (n-k-1) comparison and swapping.
+// For this reason, time complexity is equal to O(n^2).
 
 void bubbleSort(int array[], int length)
 {
@@ -39,6 +46,7 @@ int main()
 
   bubbleSort(arr, length);
 
+  // Screening output
   cout<<"\nSorting Operation Completed!\nThe sorted array is : \n";
   for(int i = 0; i < length; i++)
   {
