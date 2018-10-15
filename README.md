@@ -8,3 +8,9 @@ Several sorting algoritms are implemented in C++.
 - [Selection Sort](./sorting/selectionSorting.cpp)
 - [Merge Sort](./sorting/mergeSort.cpp)
 - [Bubble Sort](./sorting/bubbleSort.cpp)
+
+
+## searching algorithms
+Some searching algoritms are implemented in C++.
+
+- [Binary Searching](./searching/binarySearch.cpp)
