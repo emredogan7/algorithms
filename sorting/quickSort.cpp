@@ -14,20 +14,20 @@ using namespace std;
 // }
 
 template <class T>
-T hoarePartition(T arr[], int p, int r)
-{
+T hoarePartition(T arr[], int p, int r){
     T pivot = arr[p];
     int i = p - 1;
     int j = r + 1;
 
-    while (true)
+    while (1)
     {
-        while (arr[j] > pivot) {
+        do{
             j--;
-        }
-        while (arr[i] < pivot) {
+        }while(arr[j] > pivot);
+        do{
             i++;
-        }
+        }while(arr[i] < pivot);
+
         if (i < j){
             swap(arr[i], arr[j]);
         }
@@ -39,8 +39,7 @@ T hoarePartition(T arr[], int p, int r)
 template <class T>
 void quickSort(T arr[], int p, int r)
 {
-    if (p < r)
-    {
+    if (p < r){
         int q = hoarePartition(arr,p,r);
         quickSort(arr, p, q);
         quickSort(arr, q+1, r);
@@ -48,26 +47,26 @@ void quickSort(T arr[], int p, int r)
 }
 
 
-
 int main()
 {
-    // Array to be sorted.
-    const int SIZE = 10;
-    int array[SIZE] = {100, 35, 7, 21, 89, 10, 148, 983, 33, 29};
+    // Taking the size of array as input.
+     int length;
+     cout<<"\nEnter the length of your array : ";
+     cin>>length;
 
-    // Echo the array to be sorted.
-    for (int k = 0; k < SIZE; k++)
-        cout << array[k] << " ";
-    cout << endl;
+     // Taking the elements of the array as input.
+     int arr[length];
+     cout<<"\nEnter  the numbers you want to insert into your array:\n";
 
-    // Sort the array using Quicksort.
+     for(int i=0; i < length; i++){
+         cin>>arr[i];
+     }
 
-    quickSort<int>(array, 0, SIZE-1);
+     quickSort<int>(arr, 0, length-1);
+     cout << "Sorting is completed:\n";
 
-    
-    for (int k = 0; k < SIZE; k++)
-        cout << array[k] << " ";
-    cout << endl;
-
-
+     for (int i=0; i < length; i++){
+         cout << arr[i] << "\t";
+     }
+     cout << "\n";
 }
