@@ -1,19 +1,10 @@
 
 #include<iostream>
-#include<algorithm>
+#include<algorithm>                             //for swap() function.
 
 using namespace std;
 
-
-
-// Function prototypes
-// template <class T>
-// T quickSort(T arr[], int p, int r)
-// {
-//     if
-// }
-
-template <class T>
+template <class T>                              // generating template for generic use.
 T hoarePartition(T arr[], int p, int r){
     T pivot = arr[p];
     int i = p - 1;
@@ -36,8 +27,9 @@ T hoarePartition(T arr[], int p, int r){
     }
 }
 
-template <class T>
-void quickSort(T arr[], int p, int r)
+
+template <class T>                              // generating template for generic use.
+void quickSort(T arr[], int p, int r)           // recursive function. Time complexity is theta(nlgn).
 {
     if (p < r){
         int q = hoarePartition(arr,p,r);
