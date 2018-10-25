@@ -8,7 +8,9 @@ Several sorting algoritms are implemented in C++.
 - [Selection Sort](./sorting/selectionSorting.cpp)
 - [Merge Sort](./sorting/mergeSort.cpp)
 - [Bubble Sort](./sorting/bubbleSort.cpp)
-- [Quick Sort](./sorting/quickSort.cpp)
+- [Quick Sort with Lomuto Partitioning Algorithm](./sorting/quickSort_lomutoPartition.cpp)
+- [Quick Sort with Hoare Partitioning Algorithm](./sorting/quickSort_hoarePartition.cpp)
+
 
 
 
