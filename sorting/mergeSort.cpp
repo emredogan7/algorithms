@@ -7,15 +7,15 @@
 #include<iostream>
 using namespace std;
 
-
-void merge(int array[], int left, int middle, int right)
+template <class T>                              // generating template for generic use.
+void merge(T array[], int left, int middle, int right)
 {
   int i, j, k;                                        // defining the cursors to travel through arrays.
                                                       // defining the sizes of sub arrays.
   int sizeLeft = middle - left + 1;
   int sizeRight = right - middle;
 
-  int LeftArray[sizeLeft], RightArray[sizeRight];
+  T LeftArray[sizeLeft], RightArray[sizeRight];
                                                       // initializing the values of sub arrays.
   for (i = 0; i < sizeLeft; i++)
   {
@@ -64,7 +64,8 @@ void merge(int array[], int left, int middle, int right)
 
 
 // recursive algorithm to implement merge sort.
-void mergeSort(int array[], int left, int right)
+template <class T>                              // generating template for generic use.
+void mergeSort(T array[], int left, int right)
 {
   if (left < right)
   {
@@ -85,13 +86,13 @@ int main() {
   cin>>length;
 
   // Taking the elements of the array as input.
-  int arr[length];
+  char arr[length];
 	cout<<"\nEnter  the numbers you want to insert into your array:\n";
 	for(int i=0; i < length; i++)
 	{
 	  cin>>arr[i];
 	}
-  mergeSort(arr, 0, length-1);
+  mergeSort<char>(arr, 0, length-1);
 
   cout << "Sorting is completed:\n";
   for (int i=0; i < length; i++)
