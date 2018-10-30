@@ -40,14 +40,14 @@ int main()
      cin>>length;
 
      // Taking the elements of the array as input.
-     int arr[length];
+     char arr[length];
      cout<<"\nEnter  the numbers you want to insert into your array:\n";
 
      for(int i=0; i < length; i++){
          cin>>arr[i];
      }
 
-     quickSort<int>(arr, 0, length-1);
+     quickSort<char>(arr, 0, length-1);
      cout << "Sorting is completed:\n";
 
      for (int i=0; i < length; i++){
